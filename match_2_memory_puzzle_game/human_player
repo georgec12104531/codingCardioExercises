@@ -1,0 +1,17 @@
+class HumanPlayer 
+  attr_accessor :name
+  
+  def initialize(name)
+    @name = name
+  end
+  
+  def prompt 
+    p "What is your guess ? "
+  end
+  
+  def get_input
+    guess = gets.chomp.split(",").map(&:to_i)
+    
+  end
+  
+end
