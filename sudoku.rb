@@ -15,6 +15,7 @@ class SudokuGame
   end
 
   def retrieve_pos_from_ui
+    @board.render
     p = nil
     until p && legal_illegibility_of_p?(p)
       puts "Please enter a position on the board (e.g., '3,4')"
