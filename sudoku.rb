@@ -1,19 +1,12 @@
-require "colorize"
-
-puts "MUAHAHA.  The dastardly unexpected end statement.\n".red
-puts "Do NOT try to solve this error by going one method at a time and looking for an 'end'.\n".red
-puts "Instead, comment out half of the bad file at a time until the error changes.  Keep narrowing down from there.".red
-puts ""
-puts "Does this approach feel familiar?  The approach is a version of binary search.\n\n".red
-
 require_relative "board"
+require "colorize"
 
 class SudokuGame
   def self.from_file(filename)
     board = Board.from_file(filename)
     self.new(board)
   end
-
+  # 
   def initialize(board)
     @board = board
   end
@@ -23,13 +16,13 @@ class SudokuGame
     until pos && valid_pos?(pos)
       puts "Please enter a position on the board (e.g., '3,4')"
       print "> "
-
+  
       begin
         pos = parse_pos(gets.chomp)
       rescue
         puts "Invalid position entered (did you use a comma?)"
         puts ""
-
+  
         pos = nil
       end
     end
@@ -66,7 +59,7 @@ class SudokuGame
     board.render
     puts "Congratulations, you win!"
   end
-
+  
   def solved?
     board.solved?
   end
@@ -76,7 +69,7 @@ class SudokuGame
       pos.length == 2 &&
       pos.all? { |x| x.between?(0, board.size - 1) }
   end
-
+  
   def valid_val?(val)
     val.is_a?(Integer) &&
       val.between?(0, 9)
