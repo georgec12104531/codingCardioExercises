@@ -1,3 +1,7 @@
+//create node class 
+//create BST class 
+
+
 class Node {
   constructor(data, left = null, right = null) {
     this.data = data;
@@ -11,18 +15,83 @@ class BST {
     this.root = null
   }
 
-  add(val) {
+  add(data) {
     const node = this.root;
+    //if there is no root node, add new node as the root node
     if (node === null) {
-      this.root = new Node(val);
+      this.root = new Node(data)
     } else {
       const searchTree = function(node) {
-        if (val < node.val) {
+        if (data < node.data) {
           if (node.left === null) {
-            node.left = new Node(val)
+            node.left = new Node(data);
+            break;
+          } else if (node.left !== null) {
+            return searchTree(node.left)
           }
+        } else if (data > node.data) {
+          if (node.right === null) {
+            node.right = new Node (data);
+            break;
+          } else if(node.right !== null) {
+            return searchTree(node.right);
+          }
+        } else {
+          return null
         }
       }
+      
+      return searchTree(node)
     }
   }
+
+  findMin() {
+    let node = this.root;
+    while (node.left !== null) {
+      node = node.left;
+    }
+
+    return node;
+  }
+
+  findMax() {
+    let node = this.root;
+    while (node.right !== null) {
+      node = node.right;
+    }
+
+    return node;
+  }
+
+  isPresent(data) {
+    let node = this.root;
+    while (node) {
+      if (node.data === data) {
+        return true
+      }
+      if (data < node.data) {
+        node = node.left
+      } else {
+        node = node.right
+      }
+    }
+    return false
+  }
+
+
+  remove(data) {
+    const removeNode = (node, data) {
+      if (node === null) {
+        return null
+      }
+      if (node.data === data) {
+
+      }
+
+    }
+    return this.root = removeNode(this.root, data)
+  }
+
 }
+
+
