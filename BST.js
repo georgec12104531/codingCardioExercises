@@ -1,6 +1,4 @@
-//create node class 
-//create BST class 
-
+//Binary Search Tree
 
 class Node {
   constructor(data, left = null, right = null) {
@@ -25,14 +23,14 @@ class BST {
         if (data < node.data) {
           if (node.left === null) {
             node.left = new Node(data);
-            break;
+            return;
           } else if (node.left !== null) {
             return searchTree(node.left)
           }
         } else if (data > node.data) {
           if (node.right === null) {
             node.right = new Node (data);
-            break;
+            return;
           } else if(node.right !== null) {
             return searchTree(node.right);
           }
@@ -40,7 +38,6 @@ class BST {
           return null
         }
       }
-      
       return searchTree(node)
     }
   }
@@ -50,7 +47,6 @@ class BST {
     while (node.left !== null) {
       node = node.left;
     }
-
     return node;
   }
 
@@ -78,20 +74,52 @@ class BST {
     return false
   }
 
-
   remove(data) {
-    const removeNode = (node, data) {
+    const removeNode = function(node, data) {
       if (node === null) {
         return null
       }
       if (node.data === data) {
-
+        if (node.left === null) {
+          return node.right;
+        }
+        if (node.right === data) {
+          return node.left; 
+        }
+        if (node.left === null && node.right === null) {
+          return null;
+        }
+        let tempNode = node.right;
+        while (tempNode.left !== null) {
+          tempNode = tempNode.left
+        }
+        node.data = tempNode.data;
+        node.right = removeNode(node.right, tempNode.data);
+        return node;
+      } else if (data > node.data) {
+        node.right = removeNode(node.right, data);
+        return node;
+      } else if (data < node.data) {
+        node.left = removeNode(node.left, data); 
+        return node;
       }
-
     }
     return this.root = removeNode(this.root, data)
   }
 
 }
+
+
+const newBST = new BST()
+// console.log(newBST)
+newBST.add(8)
+newBST.add(3)
+newBST.add(5)
+newBST.add(4)
+newBST.add(6)
+console.log(newBST.isPresent(5))
+newBST.remove(5)
+console.log(newBST.isPresent(5))
+
 
 
