@@ -1,0 +1,338 @@
+.main-theme-container {
+  display: flex;
+  flex-direction: column;
+  height: 4000px;
+}
+
+.consumer-theme-container {
+  display: flex;
+  flex-direction: column;
+  height: 1100px;
+  width: 600px;
+  margin: 30px;
+}
+
+.consumer-theme-button-state-container {
+  display: flex;
+  height: 700px;
+}
+
+.button-state-legend-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+  height: 400px;
+  background-color: rgb(250, 250, 250);
+  padding: 35px;
+  margin: 20px;
+}
+
+.button-state-legend-example-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 403px;
+  padding: 35px;
+  margin: 20px;
+}
+
+.header--medium {
+  font-family: 'Sarabun', sans-serif;
+  color: rgb(37, 51, 64);
+  font-size: 36px;
+  margin: 20px;
+}
+
+.consumer-legend-text {
+  font-family: 'Sarabun', sans-serif;
+  color: rgb(37, 51, 64);
+  font-size: 18px;
+  width: 140px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  text-decoration: none;
+  background-color: white;
+  font-size: 18px;
+  width: 230px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.btn__text {
+  font-family: 'Sarabun', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Consumer Primary Button State Legend */
+
+.btn--consumer-primary--standard {
+  color: white;
+  background-image: linear-gradient(to top right, rgb(0, 115, 162), rgb(0, 133, 187));
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  outline: 0;
+}
+
+.btn--consumer-primary--hover {
+  outline: none;
+  color: white;
+  background-image: linear-gradient(to top right, rgb(0, 96, 135), rgb(0, 115, 162) )
+}
+
+.btn--consumer-primary--disabled {
+  background-image: linear-gradient(to top right, rgb(140, 200, 219),rgb(137, 208, 230));
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  color: white;
+  outline: 0;
+  opacity: 0.8;
+}
+
+.btn--consumer-primary--active {
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  background-image: linear-gradient(to top right, rgb(8, 60, 86), rgb(10, 76, 112));
+  color: white;
+  outline: none;
+}
+
+.btn--consumer-primary--focus {
+  background-image: linear-gradient(to top right, rgb(0, 115, 162), rgb(0, 133, 187));
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  border: rgb(148, 208, 234) 2px solid;
+  color: white;
+  outline: 0;
+  text-decoration: none;
+}
+
+/* Consumer Primary Button */
+
+.btn--consumer-primary {
+  background-image: linear-gradient(to top right, rgb(0, 115, 162), rgb(0, 133, 187));
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  color: white;
+  outline: 0;
+}
+
+.btn--consumer-primary:hover {
+  background-image: linear-gradient(to top right, rgb(0, 96, 135), rgb(0, 115, 162) )
+}
+
+button.btn--consumer-primary:disabled,
+button.btn--consumer-primary[disabled]{
+  border: 1px solid #999999;
+  background-image: linear-gradient(to top right, rgb(140, 200, 219),rgb(137, 208, 230));
+  border: none;
+  opacity: 0.8;
+}
+
+.btn--consumer-primary:active {
+  background-image: linear-gradient(to top right, rgb(8, 60, 86), rgb(10, 76, 112));
+  border: none;
+  color: white;
+  outline: 0;
+}
+
+.btn--consumer-primary:focus {
+  border: rgb(148, 208, 234) 2px solid;
+  outline: 0;
+  text-decoration: none;
+}
+
+/* Consumer Secondary Button State Legend */
+
+.btn--consumer-secondary--standard {
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  border: solid 2px rgb(46, 115, 167);
+  background-color: white;
+  color: rgb(38, 96, 139);
+}
+
+.btn--consumer-secondary--hover { 
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  outline: none;
+  color: white;
+  background-image: linear-gradient(to top right, rgb(0, 96, 135), rgb(0, 115, 162) )
+}
+
+.btn--consumer-secondary--disabled {
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  border: solid 2px rgb(46, 115, 167);
+  background-color: white;
+  color: rgb(38, 96, 139);
+  opacity: 0.4;
+}
+
+.btn--consumer-secondary--active {
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  background-image: linear-gradient(to top right, rgb(8, 60, 86), rgb(10, 76, 112));
+  color: white;
+  outline: none;
+}
+
+.btn--consumer-secondary--focus {  
+  box-shadow: 0 0 1pt 1pt rgb(148, 208, 234);
+  border: solid 2px rgb(46, 115, 167);
+  background-color: white;
+  color: rgb(38, 96, 139);
+  outline: 0;
+}
+
+/* Consumer Primary Button */
+
+.btn--consumer-secondary {
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  border: solid 2px rgb(46, 115, 167);
+  background-color: white;
+  color: rgb(38, 96, 139);
+  outline: 0;
+}
+
+.btn--consumer-secondary:hover {
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  border: 2px solid linear-gradient(to top right, rgb(0, 96, 135), rgb(0, 115, 162));
+  color: white;
+  background-image: linear-gradient(to top right, rgb(0, 96, 135), rgb(0, 115, 162));
+  outline: 0;
+}
+
+
+button.btn--consumer-secondary:disabled,
+button.btn--consumer-secondary[disabled]{
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  border: solid 2px rgb(46, 115, 167);
+  background-color: white;
+  color: rgb(38, 96, 139);
+  opacity: 0.4;
+  outline: 0;
+}
+
+.btn--consumer-secondary:active {
+  box-shadow: 1px 1px 6px rgb(197, 200, 202);
+  background-image: linear-gradient(to top right, rgb(8, 60, 86), rgb(10, 76, 112));
+  color: white;
+  outline: none;
+  border: linear-gradient(to top right, rgb(8, 60, 86), rgb(10, 76, 112));
+}
+
+button.btn--consumer-secondary:focus {
+  box-shadow: 0 0 1pt 1pt rgb(148, 208, 234);
+  border: solid 2px rgb(46, 115, 167);
+  background-color: white;
+  color: rgb(38, 96, 139);
+  outline: 0;
+}
+
+button.btn--consumer-secondary:focus:hover {
+  box-shadow: 0 0 1pt 1pt rgb(148, 208, 234);
+  border: solid 2px rgb(46, 115, 167);
+  background-color: white;
+  color: white;
+  outline: 0;
+}
+
+.business-theme-container {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  width: 880px;
+  margin: 30px;
+}
+
+.business-theme-main-state-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.business-theme-main-state-container {
+  display: flex;
+}
+
+.business-theme-state-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 73px;
+}
+
+.business-theme-state-type-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.business-theme-state-type-text { 
+  color: rgb(196,36, 70);
+  font-family: 'Sarabun', sans-serif;
+  font-size: 17px;
+  width: 100px;
+  text-align: center;
+}
+
+.business-theme-state-button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.btn--business-primary--large {
+  background-color: rgb(51, 131, 174);
+  border: none;
+  border-radius: 3px;
+  height: 34px;
+  width: 83px;
+  margin-left: 8.5px;
+  margin-right: 8.5px;
+  outline: 0;
+}
+
+/* Business Theme Large Legend */
+
+.btn--business-primary--large--unselected {
+  background-color: rgb(51, 131, 174);
+  border: none;
+  border-radius: 3px;
+  height: 34px;
+  width: 83px;
+  margin-left: 8.5px;
+  margin-right: 8.5px;
+  outline: 0;
+}
+
+.btn--business-primary--large--hover {
+  background-color: rgb(51, 131, 174);
+  border: none;
+  border-radius: 3px;
+  height: 34px;
+  width: 83px;
+  margin-left: 8.5px;
+  margin-right: 8.5px;
+  outline: 0;
+}
+
+.btn__text--primary {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.btn__text--primary {
+  
+}
+
+
+
+.btn--medium {
+
+}
+
+.btn--small {
+}
+
+
+ 
+
+
