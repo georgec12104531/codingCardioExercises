@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css"  href="style.css" media="screen"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700|Sarabun" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 </head>
 <body>
     <div class="main-theme-container">
@@ -15,7 +15,7 @@
             <h2 class="header--medium">Consumer Theme</h2>
             <div class="consumer-theme-button-state-container">
               <div class="button-state-legend-text-container">
-                <div class="consumer-legend-text">Primary Button</div>
+                <div class="consumer-legend-text">Primary Button Unselected</div>
                 <div class="consumer-legend-text">Primary Button Hover</div>
                 <div class="consumer-legend-text">Primary Button Disable</div>
                 <div class="consumer-legend-text">Primary Button Active</div>
@@ -23,7 +23,7 @@
                 <div class="consumer-legend-text">Primary Button Working</div>
               </div>
               <div class="button-state-legend-example-container">
-                <button type="button" class="btn btn__text btn--consumer-primary--standard">Primary</button>
+                <button type="button" class="btn btn__text btn--consumer-primary--unselected">Primary</button>
                 <button type="button" class="btn btn__text btn--consumer-primary--hover">Primary</button>
                 <button type="button" class="btn btn__text  btn--consumer-primary--disabled">Primary</button>
                 <button type="button" class="btn btn__text  btn--consumer-primary--active">Primary</button>
@@ -41,12 +41,12 @@
                 <div class="consumer-legend-text">Secondary Button Working</div>
               </div>
               <div class="button-state-legend-example-container">
-                <button type="button" class="btn btn__text btn--consumer-secondary--standard">Secondary</button>
-                <button type="button" class="btn btn__text btn--consumer-secondary--hover">Secondary</button>
-                <button type="button" class="btn btn__text btn--consumer-secondary--disabled">Secondary</button>
-                <button type="button" class="btn btn__text btn--consumer-secondary--active">Secondary</button>
-                <button type="button" class="btn btn__text btn--consumer-secondary--focus">Secondary</button>
-                <button type="button" class="btn btn__text btn--consumer-secondary">Secondary</button>
+                <button type="button" class="btn btn__text--consumer-secondary btn--consumer-secondary--unselected">Secondary</button>
+                <button type="button" class="btn btn__text--consumer-secondary btn--consumer-secondary--hover">Secondary</button>
+                <button type="button" class="btn btn__text--consumer-secondary btn--consumer-secondary--disabled">Secondary</button>
+                <button type="button" class="btn btn__text--consumer-secondary btn--consumer-secondary--active">Secondary</button>
+                <button type="button" class="btn btn__text--consumer-secondary btn--consumer-secondary--focus">Secondary</button>
+                <button type="button" class="btn btn__text--consumer-secondary btn--consumer-secondary">Secondary</button>
               </div>
             </div>
         </div> 
@@ -63,16 +63,65 @@
                 <div class="business-theme-state-type-text">Working</div>
             </div>
             <div class="business-theme-state-container">
-                <div class="business-theme-state-type-text">Large</div>
+                <div class="business-theme-state-type-text"> Primary Large</div>
                 <button class="btn__text--primary btn--business-primary--large--unselected">Primary</button>
-                <button class="btn__text--primary btn--business-primary--large">Primary</button>
-                <button class="btn__text--primary btn--business-primary--large">Primary</button>
-                <button class="btn__text--primary btn--business-primary--large">Primary</button>
-                <button class="btn__text--primary btn--business-primary--large">Primary</button>
+                <button class="btn__text--primary btn--business-primary--large--hover">Primary</button>
+                <button class="btn__text--primary btn--business-primary--large--focus">Primary</button>
+                <button class="btn__text--primary btn--business-primary--large--active">Primary</button>
+                <button class="btn--business-primary--large--disabled">Primary</button>
                 <button class="btn__text--primary btn--business-primary--large">Primary</button>
             </div>
+            <div class="business-theme-state-container">
+                <div class="business-theme-state-type-text">Primary Medium</div>
+                    <button class="btn__text--primary btn--business-primary--medium--unselected">Primary</button>
+                    <button class="btn__text--primary btn--business-primary--medium--hover">Primary</button>
+                    <button class="btn__text--primary btn--business-primary--medium--focus">Primary</button>
+                    <button class="btn__text--primary btn--business-primary--medium--active">Primary</button>
+                    <button class="btn--business-primary--medium--disabled">Primary</button>
+                    <button class="btn__text--primary btn--business-primary--medium">Primary</button>
+                </div>
           </div>
+          <div class="business-theme-state-container">
+                <div class="business-theme-state-type-text"> Primary Small</div>
+                    <button class="btn__text--primary--small btn--business-primary--small--unselected">Primary</button>
+                    <button class="btn__text--primary--small btn--business-primary--small--hover">Primary</button>
+                    <button class="btn__text--primary--small btn--business-primary--small--focus">Primary</button>
+                    <button class="btn__text--primary--small btn--business-primary--small--active">Primary</button>
+                    <button class="btn--business-primary--small--disabled">Primary</button>
+                    <button class="btn__text--primary--small btn--business-primary--small">Primary</button>
+            </div>
+            </br>
+            </br>
+            <div class="business-theme-state-container">
+                <div class="business-theme-state-type-text">Secondary Large</div>
+                    <button class="btn__text--secondary btn--business-secondary--large--unselected">Secondary</button>
+                    <button class="btn__text--secondary btn--business-secondary--large--hover">Secondary</button>
+                    <button class="btn__text--secondary btn--business-secondary--large--focus">Secondary</button>
+                    <button class="btn__text--secondary btn--business-secondary--large--active">Secondary</button>
+                    <button class="btn--business-secondary--large--disabled">Secondary</button>
+                    <button class="btn__text--secondary btn--business-secondary--large">Secondary</button>
+                
+            </div>
+            <div class="business-theme-state-container">
+                <div class="business-theme-state-type-text">Secondary Medium</div>
+                <button class="btn__text--secondary btn--business-secondary--medium--unselected">Secondary</button>
+                <button class="btn__text--secondary btn--business-secondary--medium--hover">Secondary</button>
+                <button class="btn__text--secondary btn--business-secondary--medium--focus">Secondary</button>
+                <button class="btn__text--secondary btn--business-secondary--medium--active">Secondary</button>
+                <button class="btn--business-secondary--medium--disabled">Secondary</button>
+                <button class="btn__text--secondary btn--business-secondary--medium">Secondary</button>    
+            </div>
+            <div class="business-theme-state-container">
+                    <div class="business-theme-state-type-text">Secondary Small</div>
+                    <button class="btn__text--secondary--small btn--business-secondary--small--unselected">Secondary</button>
+                    <button class="btn__text--secondary--small btn--business-secondary--small--hover">Secondary</button>
+                    <button class="btn__text--secondary--small btn--business-secondary--small--focus">Secondary</button>
+                    <button class="btn__text--secondary--small btn--business-secondary--small--active">Secondary</button>
+                    <button class="btn--business-secondary--small--disabled">Secondary</button>
+                    <button class="btn__text--secondary--small btn--business-secondary--small">Secondary</button>    
+                </div>
         </div>   
-    </div>   
+    </div>
+    </body>
 </body>
 </html>
