@@ -1,0 +1,59 @@
+
+  <div 
+    class="page title" 
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;">
+    <div 
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 27px;
+        color: #ffffff;
+        width: 100%;
+        padding: 18px 18px;">
+        {{#advertisers}}
+      <div 
+        class="advertiser" 
+        style="
+          font-family: OpenSansBold !important;
+          font-size: 44px;
+          font-weight: 700;
+      ">{{advertiser_name}}</div>
+        {{#campaign_names}}
+        <ul 
+          style="
+            text-align: left;
+            margin: 5px 0px;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;">{{.}}
+        </ul>
+        {{/campaign_names}}
+      {{/advertisers}}
+    </div>
+    <div 
+      class="opportunity-owner"
+      style="
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;"
+     >
+      <div>
+        {{firstname}} {{lastname}}
+      </div>
+     <div>
+      {{start_date}} - {{end_date}}
+     </div>
+    </div>
+  </div>
+
+
+
+
+
+
