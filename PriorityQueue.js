@@ -42,54 +42,52 @@ console.log(qOne.show())
 console.log(qOne.size())
 console.log(qOne.front())
 
-function PriorityQueue() {
-  this.collection = []
+function PriorityQueue () {
+    let collection = [];
+    this.printCollection = function() {
+      console.log(collection);
+    };
+    // Only change code below this line
 
-  this.enqueue = function(element) {
-    if (this.isEmpty()) {
-      this.collection.push(element)
-    } else {
-      let added = false
-      for(let i = 0; i < this.collection.length; i++) {
-        if (element[1] < this.collection[i][1]) {
-          this.collection.splice(i, 0, element)
-          console.log("we in here")
-          added = true
-          break;
-        } 
-      }
+    this.enqueue = (valArr) => {
+      collection.unshift(valArr);
 
-      if (!added) {
-        return this.collection.push(element)
+      for(let i = 0; i < collection.length - 1; i++) {
+        current = collection[i];
+        next = collection[i + 1];
+
+        if (current[1] < next[1]) {
+          console.log('hi');
+          [collection[i], collection[i + 1]] = [collection[i + 1], collection[i]];
+        }
       }
     }
-  }
 
-  this.dequeue = function() {
-    const last = this.collection.shift()
-    return last
-  }
+    this.size = () => {
+      return collection.length;
+    }
 
-  this.isEmpty = function() {
-    return this.size() === 0
-  }
+    this.isEmpty = () => {
+      return collection.length === 0;
+    }
 
-  this.size = function() {
-    return this.collection.length
-  }
-
-  this.show = function() {
-    return this.collection
-  }
+    this.dequeue = () => {
+      const item = collection.pop();
+      return item[0];
+    }
 }
 
-const newQueue = new PriorityQueue()
-newQueue.enqueue(["a", 3])
-newQueue.enqueue(["c", 5])
-newQueue.enqueue(["b", 1])
-newQueue.enqueue(["f", 9])
-console.log(newQueue.show())
-newQueue.dequeue()
-console.log(newQueue.show())
+// [['human', 1], ['kitten', 2], ['dog', 2], ['rabbit', 2]]
+const newPQ = new PriorityQueue();
+newPQ.isEmpty();
+newPQ.size();
+
+newPQ.enqueue(['rabbit', 2]);
+newPQ.enqueue(['dog', 2]);
+newPQ.enqueue(['kitten', 2]);
+newPQ.enqueue(['human', 1]);
+newPQ.enqueue(['george', 4]);
+newPQ.enqueue(['george', 3]);
+newPQ.dequeue();
 
 
