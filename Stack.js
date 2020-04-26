@@ -1,43 +1,30 @@
+function Stack() {
+  this.collection = [];
+  this.print = function() {
+    console.log(collection);
+  };
 
-
-
-function Stack () {
-  this.count = 0;
-  this.storage = {};
-
-  this.push = function(element) {
-    this.count++
-    this.storage[this.count] = element
+  this.push = (val) => {
+    this.collection.push(val)
   }
 
-  this.pop = function() {
-    const lastElement = this.storage[this.count]
-    delete this.storage[this.count]
-    this.count--
-    return lastElement
+  this.pop = () => {
+    return this.collection.pop();
   }
 
-  this.peek = function() {
-    if (this.count === 0) return undefined
-    console.log(this.storage[this.count])
+  this.peek = () => {
+    return this.collection[this.collection.length - 1];
   }
 
-  this.size = function() {
-    return this.count
+  this.isEmpty = () => {
+    return this.collection.length === 0;
   }
 
-  this.show = function() {
-    for(let i = 1; i < this.count + 1; i++) {
-      console.log(i)
-      console.log(this.storage[i])
-    }
+  this.clear = () => {
+    this.collection = [];
   }
 }
 
+const stack = new Stack();
 
-const myStack = new Stack()
-myStack.push("hello")
-myStack.push("there")
-myStack.push("sexy")
-myStack.push("boy")
-console.log(myStack.show())
+stack.pop();
