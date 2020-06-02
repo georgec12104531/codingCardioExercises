@@ -1,0 +1,8 @@
+.one,
+.two,
+.three,
+.four {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
